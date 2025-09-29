@@ -94,7 +94,7 @@ self.addEventListener('fetch', event => {
       .catch(() => {
         // Fallback for failed requests
         if (event.request.destination === 'document') {
-          return caches.match('/index.html');
+          return caches.match('./index.html');
         }
       })
   );
@@ -111,8 +111,8 @@ self.addEventListener('sync', event => {
 self.addEventListener('push', event => {
   const options = {
     body: event.data ? event.data.text() : 'New update from GreenBite!',
-    icon: '/assests/images/favicon/favicon.ico',
-    badge: '/assests/images/favicon/favicon.ico',
+  icon: './assests/images/favicon/favicon.ico',
+  badge: './assests/images/favicon/favicon.ico',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -122,12 +122,12 @@ self.addEventListener('push', event => {
       {
         action: 'explore',
         title: 'Explore',
-        icon: '/assests/images/favicon/favicon.ico'
+    icon: './assests/images/favicon/favicon.ico'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/assests/images/favicon/favicon.ico'
+    icon: './assests/images/favicon/favicon.ico'
       }
     ]
   };
@@ -143,11 +143,11 @@ self.addEventListener('notificationclick', event => {
 
   if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow('/')
+      clients.openWindow('./index.html')
     );
   } else {
     event.waitUntil(
-      clients.openWindow('/')
+      clients.openWindow('./index.html')
     );
   }
 });

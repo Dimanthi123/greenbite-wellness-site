@@ -2,26 +2,26 @@
   "name": "GreenBite - Healthy Living Made Simple",
   "short_name": "GreenBite",
   "description": "Your partner in health - Discover personalized nutrition plans, healthy recipes, and mindfulness practices",
-  "start_url": "../index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#e7f4d3",
   "theme_color": "#78ad35",
   "orientation": "portrait-primary",
-  "scope": "../",
+  "scope": "./",
   "lang": "en",
   "icons": [
     {
-      "src": "../assests/images/favicon/favicon-192x192.png",
+      "src": "./assests/images/favicon/favicon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "../assests/images/favicon/favicon-512x512.png",
+      "src": "./assests/images/favicon/favicon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "../assests/images/favicon/favicon.svg",
+      "src": "./assests/images/favicon/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
@@ -29,13 +29,13 @@
   "categories": ["health", "fitness", "food", "lifestyle"],
   "screenshots": [
     {
-      "src": "../assests/images/screenshots/home-mobile.png",
+      "src": "./assests/images/screenshots/home-mobile.png",
       "sizes": "375x667",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "../assests/images/screenshots/home-desktop.png",
+      "src": "./assests/images/screenshots/home-desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"

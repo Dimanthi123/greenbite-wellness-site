@@ -6,7 +6,7 @@
     <title>GreenBite - Healthy Living Made Simple</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./assests/images/favicon/favicon.svg">
-    <link rel="manifest" href="./js/manifest.json">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -90,6 +90,8 @@
 
     <!-- Footer -->
     <footer>
+    <!-- Install PWA Button -->
+    <button id="install-btn" style="display:none;position:fixed;bottom:24px;right:24px;z-index:1000;">Install App</button>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -142,6 +144,29 @@
                 console.log('SW registration failed: ', registrationError);
             });
         }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        const installBtn = document.getElementById('install-btn');
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'block';
+        });
+        installBtn && installBtn.addEventListener('click', () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(choiceResult => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    } else {
+                        console.log('User dismissed the install prompt');
+                    }
+                    deferredPrompt = null;
+                    installBtn.style.display = 'none';
+                });
+            }
+        });
     </script>
 </body>
 </html>
