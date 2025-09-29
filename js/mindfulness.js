@@ -18,7 +18,7 @@ const sounds = {
     rain: new Audio('./assests/sounds/rain.wav'),
     forest: new Audio('./assests/sounds/forest.wav'),
     ocean: new Audio('./assests/sounds/ocean.wav'),
-    whitenoice: new Audio('./assests/sounds/whitenoice.wav')
+    'white-noise': new Audio('./assests/sounds/whitenoice.wav')
 };
 // make all sounds loop
 Object.values(sounds).forEach(sound => sound.loop = true);
@@ -68,7 +68,7 @@ function startMeditationTimer() {
 
         if (meditationTimeLeft <= 0) {
             clearInterval(meditationInterval);
-            const audio = new Audio('../assests/sounds/bells.wav');
+            const audio = new Audio('./assests/sounds/bells.wav');
             audio.play();
             trackMeditationSession(parseInt(meditationTime.value));
         }
@@ -127,17 +127,23 @@ function setupEventListeners() {
         soundButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const sound = this.getAttribute('data-sound');
-                if (sounds[sound].paused) {
+                if (!sounds[sound].paused && !sounds[sound].ended && !sounds[sound].currentTime == 0) {
+                    // Pause and reset if already playing
+                    sounds[sound].pause();
+                    sounds[sound].currentTime = 0;
+                    this.classList.remove('active');
+                } else {
                     // Pause all others before playing this one
-                    Object.values(sounds).forEach(s => s.pause());
+                    Object.entries(sounds).forEach(([key, s]) => {
+                        if (key !== sound) {
+                            s.pause();
+                            s.currentTime = 0;
+                        }
+                    });
                     soundButtons.forEach(btn => btn.classList.remove('active'));
-
                     sounds[sound].currentTime = 0;
                     sounds[sound].play();
                     this.classList.add('active');
-                } else {
-                    sounds[sound].pause();
-                    this.classList.remove('active');
                 }
             });
         });
