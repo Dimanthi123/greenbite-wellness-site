@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Generator - GreenBite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assests/images/favicon/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+            <img src="../assests/images/favicon/favicon.ico" alt="GreenBite Logo" class="logo-img">GreenBite
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li class="nav-item"><a href="workouts.html" class="nav-link active">Workout</a></li>
+                    <li class="nav-item"><a href="mindfulness.html" class="nav-link">Mindfulness</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Workout Generator Page -->
+    <main>
+        <div class="container">
+            <!-- Workout Introduction Section -->
+            <section class="workout-introduction">
+                <div class="intro-content">
+                    <h2 class="section-title">Custom Workout Generator</h2>
+                    
+                    <div class="intro-text">
+                        <p>Welcome to your personalized workout generator! Our tool creates custom exercise routines based on your preferences, available equipment, and fitness goals. Whether you're looking to build strength, improve endurance, or just stay active, we'll help you find the perfect workout.</p>
+                    </div>
+                    
+                    <div class="intro-features">
+                        <div class="feature-item">
+                            <h3>Personalized Plans</h3>
+                            <p>Get workouts tailored to your specific body focus areas and available equipment.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>All Fitness Levels</h3>
+                            <p>Exercises suitable for beginners to advanced fitness enthusiasts.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Equipment Options</h3>
+                            <p>No equipment? No problem! We offer bodyweight and equipment-based exercises.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <h2 class="section-title">Workout Generator</h2>
+            
+            <form class="workout-form" id="workout-form">
+                <div class="form-group">
+                    <label>Select Body Parts to Target</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="arms" name="body-parts" value="arms">
+                            <label for="arms">Arms</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="legs" name="body-parts" value="legs">
+                            <label for="legs">Legs</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="core" name="body-parts" value="core">
+                            <label for="core">Core</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="chest" name="body-parts" value="chest">
+                            <label for="chest">Chest</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="back" name="body-parts" value="back">
+                            <label for="back">Back</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="full-body" name="body-parts" value="full-body" checked>
+                            <label for="full-body">Full Body</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Equipment Available</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="none" name="equipment" value="none" checked>
+                            <label for="none">None</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="dumbbells" name="equipment" value="dumbbells">
+                            <label for="dumbbells">Dumbbells</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="resistance-bands" name="equipment" value="resistance-bands">
+                            <label for="resistance-bands">Resistance Bands</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="yoga-mat" name="equipment" value="yoga-mat">
+                            <label for="yoga-mat">Yoga Mat</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Generate Workout</button>
+            </form>
+            
+            <div class="workout-result" id="workout-result" style="display: none;">
+                <h3>Your Custom Workout Plan</h3>
+                <div id="exercises-container">
+                    <!-- Exercises will be generated here -->
+                </div>
+                
+                <div class="timer-container" id="timer-container" style="display: none;">
+                    <h4 id="current-exercise">Exercise: </h4>
+                    <div class="timer-display" id="workout-timer">00:30</div>
+                    <div class="timer-controls">
+                        <button class="btn" id="start-timer">Start</button>
+                        <button class="btn" id="pause-timer">Pause</button>
+                        <button class="btn" id="reset-timer">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBite</h3>
+                    <p>Your journey to a healthier lifestyle starts with a single bite.</p>
+                    <div class="social-icons">
+                        <img src="../assests/images/facebook.png" alt="the facebook logo"> 
+                        <img src="../assests/images/instagram.png" alt="the instagram logo">
+                        <img src="../assests/images/twitter.png" alt="the X (formerly known as twitter) logo">
+                        <img src="../assests/images/pinterest.png" alt="pinterest logo">
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workouts.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive health tips and updates.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GreenBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/workout.js">
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/manifest.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+        }
+    </script>
+</body>
+</html>

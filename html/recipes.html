@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Recipes - GreenBite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assests/images/favicon/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+            <img src="../assests/images/favicon/favicon.ico" alt="GreenBite Logo" class="logo-img">GreenBite
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link active">Recipes</a></li>
+                    <li class="nav-item"><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li class="nav-item"><a href="workouts.html" class="nav-link">Workout</a></li>
+                    <li class="nav-item"><a href="mindfulness.html" class="nav-link">Mindfulness</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Healthy Recipes Page -->
+    <main>
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="recipes-introduction">
+                <div class="intro-content">
+                    <h2 class="section-title">Discover Healthy & Delicious Recipes</h2>
+                    <div class="intro-text">
+                        <p>Welcome to our recipe collection! Here you'll find nutritious, easy-to-make meals that support your health goals. Whether you're looking for quick breakfast ideas, satisfying lunches, or wholesome dinners, we've got you covered with recipes that are as delicious as they are good for you.</p>
+                    </div>
+                    
+                    <div class="intro-features">
+                        <div class="feature-item">
+                            <h3>Nutrient-Rich</h3>
+                            <p>Every recipe is packed with essential vitamins, minerals, and antioxidants to fuel your body and support overall wellness.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Easy & Quick</h3>
+                            <p>Most recipes can be prepared in 30 minutes or less, perfect for busy lifestyles without compromising on nutrition.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Dietary Friendly</h3>
+                            <p>Find options for various dietary preferences including vegetarian, gluten-free, and low-carb alternatives.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <h2 class="section-title">Recipe Collection</h2>
+            
+            <div class="filter-section">
+                <div class="filter-form">
+                    <div class="filter-group">
+                        <label for="category-filter">Filter by Category</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snack">Snacks</option>
+                            <option value="smoothie">Smoothies</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="search">Search Recipes</label>
+                        <input type="text" id="search" placeholder="Enter recipe name...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipes-container" id="recipes-container">
+                <!-- Recipe cards will be generated here -->
+            </div>
+        </div>
+
+        <!-- Recipe Modal -->
+        <div class="modal" id="recipe-modal" aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+                
+                
+                <img src="placeholder.jpg" alt="Recipe image" class="modal-image" id="modal-image">
+                
+                <h3 class="modal-title" id="modal-title">Recipe Title</h3>
+                
+                <div class="recipe-tags" id="modal-tags"></div>
+                
+                <h4>Ingredients</h4>
+                <ul class="ingredients-list" id="modal-ingredients"></ul>
+                
+                <h4>Preparation</h4>
+                <ol class="steps-list" id="modal-steps"></ol>
+                
+                <h4>Nutrition Information</h4>
+                <table class="nutrition-table">
+                    <thead>
+                        <tr>
+                            <th>Nutrient</th>
+                            <th>Amount</th>
+                            <th>% Daily Value</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modal-nutrition">
+                        <!-- Nutrition data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBite</h3>
+                    <p>Your journey to a healthier lifestyle starts with a single bite.</p>
+                    <div class="social-icons">
+                        <img src="../assests/images/facebook.png" alt="the facebook logo"> 
+                        <img src="../assests/images/instagram.png" alt="the instagram logo">
+                        <img src="../assests/images/twitter.png" alt="the X (formerly known as twitter) logo">
+                        <img src="../assests/images/pinterest.png" alt="pinterest logo">
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workouts.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive health tips and updates.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GreenBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/recipes.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/manifest.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+        }
+    </script>
+</body>
+</html>

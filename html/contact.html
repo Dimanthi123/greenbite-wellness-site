@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GreenBite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assests/images/favicon/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+            <img src="../assests/images/favicon/favicon.ico" alt="GreenBite Logo" class="logo-img">GreenBite
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li class="nav-item"><a href="workouts.html" class="nav-link">Workout</a></li>
+                    <li class="nav-item"><a href="mindfulness.html" class="nav-link">Mindfulness</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact & Feedback Page -->
+    <main>
+        <div class="container">
+            <h2 class="section-title">Contact Us & Feedback</h2>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <div class="success-message" id="contact-success">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                    
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                            <div class="error-message" id="name-error">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                            <div class="error-message" id="email-error">Please enter a valid email</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                            <div class="error-message" id="message-error">Please enter your message</div>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="map-container">
+                    <h3>Our Location</h3>
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=..." 
+                            width="600" 
+                            height="300" 
+                            style="border:0; width:100%; max-width:100%;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+                    <p style="margin-top: 1rem;">Location: GreenBite HQ</p>
+                    <p>Contact Number: 0712345678</p>
+                    <p>Email: info@greenbite.com</p>
+                </div>
+            </div>
+            
+            <div class="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How often should I update my meal plan? <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We recommend updating your meal plan every 4-6 weeks to keep your meals interesting and ensure nutritional variety. However, if your goals change or you feel stuck in a rut, feel free to update it more frequently.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use GreenBite if I have dietary restrictions? <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! Our recipe filters allow you to select options that accommodate various dietary needs including gluten-free, dairy-free, vegetarian, and vegan preferences. You can also contact us for personalized advice.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is the calorie calculator? <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Our calculator uses widely accepted formulas for estimating BMR and TDEE. However, individual metabolism can vary, so consider these numbers as a starting point and adjust based on your personal results and needs.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need equipment for the workouts? <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Many of our workouts require no equipment at all. You can filter workouts based on the equipment you have available, whether it's just your bodyweight, dumbbells, resistance bands, or other fitness accessories.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBite</h3>
+                    <p>Your journey to a healthier lifestyle starts with a single bite.</p>
+                    <div class="social-icons">
+                        <img src="../assests/images/facebook.png" alt="the facebook logo"> 
+                        <img src="../assests/images/instagram.png" alt="the instagram logo">
+                        <img src="../assests/images/twitter.png" alt="the X (formerly known as twitter) logo">
+                        <img src="../assests/images/pinterest.png" alt="pinterest logo">
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workouts.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive health tips and updates.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GreenBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/contact.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/manifest.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+        }
+    </script>
+</body>
+</html>

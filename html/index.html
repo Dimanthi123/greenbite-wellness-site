@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite - Healthy Living Made Simple</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assests/images/favicon/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+            <img src="../assests/images/favicon/favicon.ico" alt="GreenBite Logo" class="logo-img">GreenBite
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li class="nav-item"><a href="workouts.html" class="nav-link">Workout</a></li>
+                    <li class="nav-item"><a href="mindfulness.html" class="nav-link">Mindfulness</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>GreenBite<br>Your Partner in Health</h1>
+                <div class="slogan-container">
+                    <div class="slogan">Eat well. Live well. Be well.</div>
+                </div>
+                <p>Discover personalized nutrition plans, healthy recipes, and mindfulness practices to transform your wellness journey.</p>
+                <a href="recipes.html" class="btn">Explore Recipes</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="introduction">
+            <div class="container">
+                <h2 class="section-title">Welcome to GreenBite</h2>
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <p>At GreenBite, we believe that healthy living should be simple, accessible, and enjoyable. Our mission is to empower you with the tools, knowledge, and inspiration you need to create lasting positive changes in your life.</p>
+                        
+                        <div class="intro-features">
+                            <div class="feature-item">
+                                <h3>Nutrition Made Easy</h3>
+                                <p>Discover delicious, nutritious recipes tailored to your dietary preferences and health goals.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>Personalized Fitness</h3>
+                                <p>Get workout plans that fit your lifestyle and help you build strength and endurance.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>Mindful Living</h3>
+                                <p>Learn meditation techniques and mindfulness practices to reduce stress and improve mental clarity.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>Smart Tools</h3>
+                                <p>Use our calculators and trackers to monitor your progress and stay motivated on your journey.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="health-tip">
+                <h2>Health Tip of the Day</h2>
+                <div class="tip-container">
+                    <p id="daily-tip">Start your day with a glass of warm water and lemon to boost metabolism and aid digestion.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBite</h3>
+                    <p>Your journey to a healthier lifestyle starts with a single bite.</p>
+                    <div class="social-icons">
+                        <img src="../assests/images/facebook.png" alt="the facebook logo"> 
+                        <img src="../assests/images/instagram.png" alt="the instagram logo">
+                        <img src="../assests/images/twitter.png" alt="the X (formerly known as twitter) logo">
+                        <img src="../assests/images/pinterest.png" alt="pinterest logo">
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workouts.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive health tips and updates.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GreenBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/manifest.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+        }
+    </script>
+</body>
+</html>

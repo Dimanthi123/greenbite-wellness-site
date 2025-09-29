@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness - GreenBite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assests/images/favicon/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+            <img src="../assests/images/favicon/favicon.ico" alt="GreenBite Logo" class="logo-img">GreenBite
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li class="nav-item"><a href="workouts.html" class="nav-link">Workout</a></li>
+                    <li class="nav-item"><a href="mindfulness.html" class="nav-link active">Mindfulness</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mindfulness Page -->
+    <main>
+        <div class="container">
+            <!-- Mindfulness Introduction Section -->
+            <section class="mindfulness-introduction">
+                <div class="intro-content">
+                    <h2 class="section-title">Mindfulness & Meditation</h2>
+                    
+                    <div class="intro-text">
+                        <p>Welcome to your sanctuary for mental wellness. Mindfulness is the practice of being present in the moment, cultivating awareness, and reducing stress through meditation and breathing exercises. Our tools are designed to help you find balance and peace in your daily life.</p>
+                    </div>
+                    
+                    <div class="intro-features">
+                        <div class="feature-item">
+                            <h3>Guided Breathing</h3>
+                            <p>Follow our breathing exercises to calm your nervous system and reduce anxiety through controlled breathing patterns.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Meditation Timer</h3>
+                            <p>Set custom meditation sessions with ambient sounds to create the perfect environment for your practice.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Stress Reduction</h3>
+                            <p>Learn techniques to manage stress, improve focus, and enhance your overall mental well-being.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="mindfulness-container">
+                <div class="breathing-section">
+                    <h3>Guided Breathing Exercise</h3>
+                    <p>Follow the animation to practice deep breathing for relaxation.</p>
+                    
+                    <div class="breathing-circle" id="breathing-circle">
+                        Breathe In
+                    </div>
+                    
+                    <div class="breathing-controls">
+                        <button class="btn" id="start-breathing">Start</button>
+                        <button class="btn" id="stop-breathing">Stop</button>
+                    </div>
+                </div>
+                
+                <div class="timer-section">
+                    <h3>Meditation Timer</h3>
+                    <p>Set a timer for your meditation session.</p>
+                    
+                    <div class="form-group">
+                        <label for="meditation-time">Minutes</label>
+                        <input type="number" id="meditation-time" min="1" max="60" value="5">
+                    </div>
+                    
+                    <div class="timer-display" id="meditation-timer">05:00</div>
+                    
+                    <div class="timer-controls">
+                        <button class="btn" id="start-meditation">Start</button>
+                        <button class="btn" id="pause-meditation">Pause</button>
+                        <button class="btn" id="reset-meditation">Reset</button>
+                    </div>
+                    
+                    <div class="ambient-sounds">
+                        <button class="sound-btn" data-sound="rain">Rain</button>
+                        <button class="sound-btn" data-sound="forest">Forest</button>
+                        <button class="sound-btn" data-sound="ocean">Ocean</button>
+                        <button class="sound-btn" data-sound="white-noise">White Noise</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GreenBite</h3>
+                    <p>Your journey to a healthier lifestyle starts with a single bite.</p>
+                    <div class="social-icons">
+                        <img src="../assests/images/facebook.png" alt="the facebook logo"> 
+                        <img src="../assests/images/instagram.png" alt="the instagram logo">
+                        <img src="../assests/images/twitter.png" alt="the X (formerly known as twitter) logo">
+                        <img src="../assests/images/pinterest.png" alt="pinterest logo">
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="workouts.html">Workout</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive health tips and updates.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GreenBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/mindfulness.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/manifest.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+        }
+    </script>
+</body>
+</html>
