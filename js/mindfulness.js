@@ -15,10 +15,10 @@ let meditationTimeLeft;
 
 //Ambient sounds
 const sounds = {
-    rain: new Audio('../assests/sounds/rain.wav'),
-    forest: new Audio('../assests/sounds/forest.wav'),
-    ocean: new Audio('../assests/sounds/ocean.wav'),
-    whitenoice: new Audio('../assests/sounds/whitenoice.wav')
+    rain: new Audio('./assests/sounds/rain.wav'),
+    forest: new Audio('./assests/sounds/forest.wav'),
+    ocean: new Audio('./assests/sounds/ocean.wav'),
+    whitenoice: new Audio('./assests/sounds/whitenoice.wav')
 };
 // make all sounds loop
 Object.values(sounds).forEach(sound => sound.loop = true);

@@ -99,7 +99,7 @@ function startExerciseTimer(exercise) {
 
             if (timeLeft <= 0) {
                 clearInterval(timerInterval);
-                const audio = new Audio('assests/sounds/bell.mp3');
+                const audio = new Audio('./assests/sounds/bell.mp3');
                 audio.play();
             }
         }, 1000);
