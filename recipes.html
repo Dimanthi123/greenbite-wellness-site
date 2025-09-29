@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Recipes - GreenBite</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="../assests/images/favicon/favicon.svg">
     <link rel="manifest" href="/manifest.json">
 </head>
@@ -13,7 +13,7 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-            <img src="../assests/images/favicon/favicon.ico" alt="GreenBite Logo" class="logo-img">GreenBite
+            <img src="./assests/images/favicon/favicon.ico" alt="GreenBite Logo" class="logo-img">GreenBite
             </a>
             <nav>
                 <ul class="nav-menu">
@@ -131,10 +131,10 @@
                     <h3>GreenBite</h3>
                     <p>Your journey to a healthier lifestyle starts with a single bite.</p>
                     <div class="social-icons">
-                        <img src="../assests/images/facebook.png" alt="the facebook logo"> 
-                        <img src="../assests/images/instagram.png" alt="the instagram logo">
-                        <img src="../assests/images/twitter.png" alt="the X (formerly known as twitter) logo">
-                        <img src="../assests/images/pinterest.png" alt="pinterest logo">
+                        <img src="./assests/images/facebook.png" alt="the facebook logo">
+                        <img src="./assests/images/instagram.png" alt="the instagram logo">
+                        <img src="./assests/images/twitter.png" alt="the X (formerly known as twitter) logo">
+                        <img src="./assests/images/pinterest.png" alt="pinterest logo">
                     </div>
                 </div>
                 
@@ -165,11 +165,11 @@
         </div>
     </footer>
 
-    <script src="../js/common.js"></script>
-    <script src="../js/recipes.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/recipes.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/manifest.js')
+            navigator.serviceWorker.register('./js/manifest.js')
             .then(registration => {
                 console.log('SW registered: ', registration);
             })

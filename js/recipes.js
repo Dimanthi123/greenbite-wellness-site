@@ -4,7 +4,7 @@ const recipes = [
         id: 1,
         title: "Avocado Toast with Poached Eggs",
         category: "breakfast",
-        image: "../assests/images/ws-12.jpg",
+    image: "./assests/images/ws-12.jpg",
         description: "A nutritious and protein-packed breakfast to start your day right.",
         ingredients: [
             "2 slices whole grain bread",
@@ -38,7 +38,7 @@ const recipes = [
         id: 2,
         title: "Quinoa Salad with Roasted Vegetables",
         category: "lunch",
-        image: "../assests/images/ws-13.jpg",
+    image: "./assests/images/ws-13.jpg",
         description: "A colorful and nutrient-dense salad perfect for lunch or as a side dish.",
         ingredients: [
             "1 cup quinoa, rinsed",
@@ -76,7 +76,7 @@ const recipes = [
         id: 3,
         title: "Grilled Salmon with Asparagus",
         category: "dinner",
-        image: "../assests/images/ws-14.jpg",
+    image: "./assests/images/ws-14.jpg",
         description: "A heart-healthy dinner rich in omega-3 fatty acids and antioxidants.",
         ingredients: [
             "2 salmon fillets (6 oz each)",
@@ -109,7 +109,7 @@ const recipes = [
         id: 4,
         title: "Green Power Smoothie",
         category: "smoothie",
-        image: "../assests/images/ws-20.jpg",
+    image: "./assests/images/ws-20.jpg",
         description: "A nutrient-packed smoothie that provides energy and essential vitamins.",
         ingredients: [
             "1 cup spinach",
@@ -140,7 +140,7 @@ const recipes = [
         id: 5,
         title: "Energy Bites",
         category: "snack",
-        image: "../assests/images/ws-15.jpg",
+    image: "./assests/images/ws-15.jpg",
         description: "No-bake snacks perfect for a quick energy boost any time of day.",
         ingredients: [
             "1 cup rolled oats",
@@ -171,7 +171,7 @@ const recipes = [
         id: 6,
         title: "Mediterranean Bowl",
         category: "lunch",
-        image: "../assests/images/ws-17.jpg",
+    image: "./assests/images/ws-17.jpg",
         description: "A fresh and flavorful bowl inspired by Mediterranean cuisine.",
         ingredients: [
             "1 cup cooked chickpeas",
